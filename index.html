@@ -1,0 +1,564 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bhanu Prasad | Portfolio</title>
+  <meta name="description" content="Kalva Bhanu Prasad – Technical / Production Analyst portfolio. Skills in Linux, Monitoring, Cloud, DevOps, and Production Support." />
+  <link rel="icon" href="favicon.ico" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+    body{background:#1f2430;color:#fff;scroll-behavior:smooth}
+
+    /* ===== HEADER ===== */
+    header{
+      position:sticky;top:0;z-index:1000;display:flex;justify-content:space-between;align-items:center;
+      padding:12px 60px;background:#1f2430;box-shadow:0 4px 20px rgba(0,0,0,0.4)
+    }
+    header h2{color:#ffc83d;font-weight:500;position:relative;font-size:16px;letter-spacing:.4px;white-space:nowrap;line-height:1.2}
+.nav-fresher{display:block;font-size:12px;font-weight:400;color:#cfcfcf;margin-top:2px}
+header h2::after{content:'';position:absolute;left:0;bottom:-2px;width:0;height:3px;background:linear-gradient(90deg,#ffd700,#ffb300);transition:width .4s ease}
+header:hover h2::after{width:100%}
+
+    nav{display:flex;align-items:center}
+    nav a{color:#ccc;margin-left:26px;text-decoration:none;font-weight:500;position:relative}
+nav a.active{color:#ffc83d}
+nav a.active::after{content:'';position:absolute;left:0;bottom:-6px;width:100%;height:2px;background:#ffc83d}
+    nav a:hover{color:#ffc83d}
+
+    .nav-icons{display:flex;align-items:center;gap:2px;margin-left:4px;position:relative}
+    .nav-icons a{font-size:13px;color:#ccc;padding:0}
+    .nav-icons a:hover{color:#ffc83d}
+
+    .mail-menu{position:absolute;top:36px;right:0;background:#2a3040;border-radius:10px;
+      box-shadow:0 10px 30px rgba(0,0,0,0.5);display:none;flex-direction:column;min-width:160px;z-index:2000}
+    .mail-menu a{padding:10px 14px;color:#ccc;text-decoration:none;font-size:14px;display:flex;align-items:center;gap:8px}
+    .mail-menu a:hover{background:#1f2430;color:#ffc83d}
+
+    /* ===== SCROLL REVEAL ===== */
+.reveal{opacity:0;transform:translateY(40px);transition:opacity .8s ease, transform .8s ease}
+.reveal.show{opacity:1;transform:translateY(0)}
+
+/* ===== STAGGER (CARDS) ===== */
+.stagger{opacity:0;transform:translateY(30px);transition:opacity .6s ease, transform .6s ease}
+.stagger.show{opacity:1;transform:translateY(0)}
+
+/* ===== HERO ===== */
+    .hero{display:flex;gap:60px;align-items:center;padding:90px 80px}
+    .hero h1{font-size:64px;line-height:1.1}
+    .hero h1 span{color:#ffc83d}
+    .role{margin:18px 0;color:#ffc83d;font-weight:500}
+    .desc{max-width:520px;color:#cfcfcf}
+    .btn{
+  display:inline-block;
+  margin-top:26px;
+  padding:14px 38px;
+  background:linear-gradient(135deg,#ffc83d,#ffb300);
+  color:#000;
+  text-decoration:none;
+  border-radius:30px;
+  font-weight:600;
+  transition:transform .3s ease, box-shadow .3s ease
+}
+.btn:hover{
+  transform:translateY(-4px);
+  box-shadow:0 10px 25px rgba(255,200,61,.4)
+}
+
+    section{padding:90px 80px}
+    section h2{text-align:center;margin-bottom:60px;font-size:38px}
+
+    /* ===== EDUCATION ===== */
+    /* Highlight on hover / focus */
+    .edu-content, .tech-card, .achieve-card, .project{
+      transition:box-shadow .3s ease, transform .3s ease, border .3s ease
+    }
+    .edu-content:hover, .edu-content:focus-within,
+    .tech-card:hover, .tech-card:focus-within,
+    .achieve-card:hover, .achieve-card:focus-within,
+    .project:hover, .project:focus-within{
+      box-shadow:0 -4px 0 #ffd700, 0 10px 30px rgba(255,215,0,.35);
+      transform:translateY(-4px)
+    }
+
+    .gold-badge{
+      display:inline-block;
+      margin-left:6px;
+      padding:4px 10px;
+      background:linear-gradient(135deg,#ffd700,#ffb300,#ffd700);
+      color:#000;
+      border-radius:20px;
+      font-weight:600;
+      font-size:13px;
+      box-shadow:0 0 12px rgba(255,215,0,.7);
+      animation:goldGlow 2.5s infinite
+    }
+    @keyframes goldGlow{
+      0%{box-shadow:0 0 8px rgba(255,215,0,.4)}
+      50%{box-shadow:0 0 20px rgba(255,215,0,1)}
+      100%{box-shadow:0 0 8px rgba(255,215,0,.4)}
+    }
+
+
+    .education{background:#222836}
+    .edu-timeline{position:relative;max-width:1000px;margin:0 auto}
+    .edu-timeline::before{content:'';position:absolute;left:50%;top:0;transform:translateX(-50%);width:3px;height:100%;background:#ffc83d}
+    .edu-item{display:flex;width:100%;margin-bottom:60px;position:relative}
+    .edu-item.left{justify-content:flex-end;padding-right:60px}
+    .edu-item.right{justify-content:flex-start;padding-left:60px}
+    .edu-item .dot{position:absolute;left:50%;transform:translateX(-50%);width:18px;height:18px;background:#ffc83d;border-radius:50%}
+    .edu-content{width:420px;background:#2a3040;padding:26px;border-radius:16px}
+    .edu-content strong{color:#ffc83d}
+
+    /* ===== SKILLS ===== */
+    .tech-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px}
+    .tech-card{background:#2a3040;padding:24px;border-radius:14px}
+    .tech-card h3{color:#ffc83d;margin-bottom:8px;font-size:16px}
+    .tech-card p{color:#cfcfcf;font-size:14px}
+
+    /* ===== ACHIEVEMENTS ===== */
+.achieve-card::before{
+  content:"\f091"; /* trophy icon */
+  font-family:"Font Awesome 6 Free";
+  font-weight:900;
+  position:absolute;
+  top:-18px;
+  right:-18px;
+  width:44px;
+  height:44px;
+  background:linear-gradient(135deg,#ffd700,#ffb300,#ffd700);
+  color:#000;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:50%;
+  box-shadow:0 0 15px rgba(255,215,0,.6);
+  animation:goldPulse 2.5s infinite
+}
+
+@keyframes goldPulse{
+  0%{transform:scale(1);box-shadow:0 0 10px rgba(255,215,0,.4)}
+  50%{transform:scale(1.15);box-shadow:0 0 25px rgba(255,215,0,.9)}
+  100%{transform:scale(1);box-shadow:0 0 10px rgba(255,215,0,.4)}
+}
+    .achievements{background:#222836}
+    .achieve-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:30px}
+    .achieve-card{background:#2a3040;padding:26px;border-radius:16px}
+    .achieve-card h3{color:#ffc83d;margin-bottom:8px}
+    .achieve-card p{color:#cfcfcf;font-size:15px}
+
+    /* ===== PROJECTS ===== */
+    .project{background:#2a3040;padding:30px;border-radius:14px;margin-bottom:24px}
+    .project span{color:#ffc83d;font-size:14px}
+
+    /* ===== CONTACT ===== */
+    .contact{text-align:center}
+
+    .contact-wrap{
+      display:flex;
+      justify-content:center;
+      gap:40px;
+      margin-top:40px;
+      flex-wrap:wrap
+    }
+
+    .contact-box{
+      background:#2a3040;
+      border:1px solid rgba(255,200,61,.35);
+      border-radius:16px;
+      padding:26px 30px;
+      min-width:280px;
+      max-width:360px;
+      transition:transform .3s ease, box-shadow .3s ease
+    }
+
+    .contact-box:hover{
+      transform:translateY(-4px);
+      box-shadow:0 10px 30px rgba(255,215,0,.35)
+    }
+
+    .contact-box h3{
+      color:#ffc83d;
+      margin-bottom:18px;
+      font-size:18px
+    }
+
+    .contact-item{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      padding:10px 0;
+      border-bottom:1px dashed rgba(255,255,255,.12);
+      color:#cfcfcf;
+      font-size:15px
+    }
+
+    .contact-item:last-child{border-bottom:none}
+
+    .contact-item i{color:#ffc83d;min-width:18px}
+
+    .contact-item a{
+      color:#cfcfcf;
+      text-decoration:none
+    }
+
+    .contact-item a:hover{color:#ffc83d}
+
+
+    footer{text-align:center;padding:25px;color:#888}
+
+    @media(max-width:900px){
+      header,section,.hero{padding:40px}
+      .hero{flex-direction:column;text-align:center}
+      .edu-timeline::before{left:8px}
+      .edu-item{justify-content:flex-start;padding-left:40px}
+      .edu-item.left,.edu-item.right{padding:0}
+      .edu-item .dot{left:8px;transform:none}
+      .edu-content{width:100%}
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h2>
+  Technical / Production Analyst<br>
+  <span class="nav-fresher">Fresher</span>
+</h2>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#education">Education</a>
+    <a href="#skills">Skills</a>
+    <a href="#achievements">Achievements</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+
+    <div class="nav-icons">
+      <a href="#" onclick="toggleMailMenu(event)"><i class="fa-solid fa-envelope"></i></a>
+      <div class="mail-menu" id="mailMenu">
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=bhanuprasad6335@gmail.com&su=Portfolio%20Contact" target="_blank"><i class="fa-brands fa-google"></i> Gmail</a>
+        <a href="https://outlook.live.com/mail/0/deeplink/compose?to=bhanuprasad6335@gmail.com&subject=Portfolio%20Contact" target="_blank"><i class="fa-brands fa-microsoft"></i> Outlook</a>
+      </div>
+      <a href="https://www.linkedin.com/in/kalva-bhanuprasad/" target="_blank" aria-label="LinkedIn Profile"><i class="fa-brands fa-linkedin"></i></a>
+      <a href="https://github.com/Bhanu1476" target="_blank" aria-label="GitHub Profile"><i class="fa-brands fa-github"></i></a>
+    </div>
+  </nav>
+</header>
+
+<section class="hero reveal" id="about">
+  <div>
+    <h1>Kalva <br><span>Bhanu Prasad</span></h1>
+    <p class="role">Production • Application • Technical • NOC • API • Product Support Engineer</p>
+    <p class="desc">Electronics and Communication Engineering graduate with hands-on exposure to Linux systems, monitoring tools, cloud fundamentals, dashboards, APIs, and incident workflows.</p>
+    <div style="display:flex;gap:14px;flex-wrap:wrap">
+    <a class="btn" href="Kalva_BhanuPrasad.pdf" download>
+      <i class="fa-solid fa-file-arrow-down" style="margin-right:8px"></i>
+      Download Resume
+    </a>
+    <a class="btn" href="Kalva_BhanuPrasad.pdf" target="_blank" rel="noopener" style="background:transparent;color:#ffc83d;border:2px solid #ffc83d">
+      <i class="fa-solid fa-eye" style="margin-right:8px"></i>
+      View Resume
+    </a>
+    </div>
+    <div style="margin-top:18px;display:flex;gap:14px;align-items:center">
+      <a href="tel:+916302243327" title="Call" style="color:#ffc83d"><i class="fa-solid fa-phone"></i></a>
+      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=bhanuprasad6335@gmail.com" target="_blank" title="Email" style="color:#ffc83d"><i class="fa-solid fa-envelope"></i></a>
+      <a href="https://www.linkedin.com/in/kalva-bhanuprasad/" target="_blank" title="LinkedIn" style="color:#ffc83d"><i class="fa-brands fa-linkedin"></i></a>
+      <a href="https://github.com/Bhanu1476" target="_blank" title="GitHub" style="color:#ffc83d"><i class="fa-brands fa-github"></i></a>
+    </div>
+  </div>
+  
+</section>
+
+<section class="stats reveal" id="stats" style="background:#1b202b;padding:40px 60px">
+  <div style="display:flex;justify-content:space-around;flex-wrap:wrap;gap:16px;text-align:center">
+
+    <div>
+      <div style="font-size:26px;margin-bottom:4px">🎓</div>
+      <h2 style="color:#ffd700;font-size:32px">3</h2>
+      <p style="color:#cfcfcf">Education</p>
+    </div>
+
+    <div>
+      <div style="font-size:26px;margin-bottom:4px">📁</div>
+      <h2 style="color:#ffd700;font-size:32px">2</h2>
+      <p style="color:#cfcfcf">Projects</p>
+    </div>
+
+    <div>
+      <div style="font-size:26px;margin-bottom:4px">🛠️</div>
+      <h2 style="color:#ffd700;font-size:32px">9</h2>
+      <p style="color:#cfcfcf">Technical Skills</p>
+    </div>
+</section>
+
+<section class="education reveal" id="education">
+  <h2>Education</h2>
+  <div class="edu-timeline">
+
+    <div class="edu-item left"><span class="dot"></span>
+      <div class="edu-content">
+        <strong>Bachelor of Technology (B.Tech)</strong><br>
+        Electronics and Communication Engineering (ECE)<br>
+        Bharath Institute of Higher Education & Research<br>
+        <span style="color:#cfcfcf;font-size:14px">📍 Chennai, Tamil Nadu • 🎓 Year of Passing: 2025 • 📊 CGPA: <span class="gold-badge">8.41 / 10 ⭐</span></span>
+      </div>
+    </div>
+
+    <div class="edu-item right"><span class="dot"></span>
+      <div class="edu-content">
+        <strong>Intermediate (10+2)</strong><br>
+        <em style="color:#aaa;font-size:14px">Narayana Junior College</em><br>
+        Board of Intermediate Education, Andhra Pradesh<br>
+        <span style="color:#cfcfcf;font-size:14px">📍 Kadapa, Andhra Pradesh • 🎓 Year of Passing: 2021 • 📊 Percentage: 73%</span>
+      </div>
+    </div>
+
+    <div class="edu-item left"><span class="dot"></span>
+      <div class="edu-content">
+        <strong>Secondary School Certificate (SSC)</strong><br>
+        <em style="color:#aaa;font-size:14px">Chaitanya Public High School, Vempalli</em><br>
+        Board of Secondary Education, Andhra Pradesh<br>
+        <span style="color:#cfcfcf;font-size:14px">📍 Kadapa, Andhra Pradesh • 🎓 Year of Passing: 2018 • 📊 CGPA: <span class="gold-badge">9.7 / 10 ⭐</span></span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="skills" class="reveal">
+  <h2>Technical Skills</h2>
+  <div class="tech-grid">
+
+    <div class="tech-card stagger">
+      <h3><i class="fa-solid fa-desktop" style="margin-right:6px;color:#ffd700"></i>Operating Systems</h3>
+      <p>Linux, Windows</p>
+    </div>
+
+    <div class="tech-card stagger">
+      <h3><i class="fa-solid fa-chart-line" style="margin-right:6px;color:#ffd700"></i>Monitoring & Observability</h3>
+      <p>Grafana, Kibana, AWS CloudWatch</p>
+    </div>
+
+    <div class="tech-card stagger">
+      <h3><i class="fa-solid fa-ticket" style="margin-right:6px;color:#ffd700"></i>Incident / Bug Tracking</h3>
+      <p>Jira</p>
+    </div>
+
+    <div class="tech-card stagger">
+      <h3><i class="fa-solid fa-boxes-stacked" style="margin-right:6px;color:#ffd700"></i>Containers & Orchestration</h3>
+      <p>Docker, Kubernetes</p>
+    </div>
+
+    <div class="tech-card stagger">
+      <h3><i class="fa-solid fa-server" style="margin-right:6px;color:#ffd700"></i>Application & Web Servers</h3>
+      <p>Apache Tomcat, Nginx</p>
+    </div>
+
+    <div class="tech-card stagger">
+      <h3><i class="fa-solid fa-cloud" style="margin-right:6px;color:#ffd700"></i>Cloud Platforms</h3>
+      <p>AWS</p>
+    </div>
+
+    <div class="tech-card stagger">
+      <h3><i class="fa-solid fa-database" style="margin-right:6px;color:#ffd700"></i>Databases</h3>
+      <p>PostgreSQL, MySQL</p>
+    </div>
+
+    <div class="tech-card stagger">
+      <h3><i class="fa-solid fa-terminal" style="margin-right:6px;color:#ffd700"></i>Scripting & Automation</h3>
+      <p>Shell Scripting</p>
+    </div>
+
+    <div class="tech-card stagger">
+      <h3><i class="fa-solid fa-code" style="margin-right:6px;color:#ffd700"></i>API & Debugging Tools</h3>
+      <p>Postman, HTTP Status Codes</p>
+    </div>
+
+  </div>
+</section>
+
+<section class="achievements reveal" id="achievements">
+  <h2>Achievements</h2>
+  <div class="achieve-grid">
+
+    <div class="achieve-card stagger">
+      <h3>Hands-on Technical Practice</h3>
+      <ul style="list-style:none;padding-left:0;color:#cfcfcf;font-size:15px">
+        <li><i class="fa-solid fa-check-circle" style="color:#ffd700;margin-right:8px"></i>Practical Linux system administration and troubleshooting</li>
+        <li><i class="fa-solid fa-check-circle" style="color:#ffd700;margin-right:8px"></i>Hands-on experience with monitoring and log analysis tools</li>
+        <li><i class="fa-solid fa-check-circle" style="color:#ffd700;margin-right:8px"></i>Exposure to cloud fundamentals and support workflows</li>
+      </ul>
+    </div>
+
+    <div class="achieve-card stagger">
+      <h3>Academic Project Excellence</h3>
+      <ul style="list-style:none;padding-left:0;color:#cfcfcf;font-size:15px">
+        <li><i class="fa-solid fa-star" style="color:#ffd700;margin-right:8px"></i>Successfully completed deep learning and computer vision projects</li>
+        <li><i class="fa-solid fa-star" style="color:#ffd700;margin-right:8px"></i>Applied real-world datasets and evaluation techniques</li>
+      </ul>
+    </div>
+
+    <div class="achieve-card stagger">
+      <h3>Monitoring & Observability Skills</h3>
+      <ul style="list-style:none;padding-left:0;color:#cfcfcf;font-size:15px">
+        <li><i class="fa-solid fa-chart-line" style="color:#ffd700;margin-right:8px"></i>Created dashboards using Grafana and Kibana</li>
+        <li><i class="fa-solid fa-chart-line" style="color:#ffd700;margin-right:8px"></i>Analyzed logs and metrics for application health</li>
+      </ul>
+    </div>
+
+    <div class="achieve-card stagger">
+      <h3>Tool-Based Learning</h3>
+      <ul style="list-style:none;padding-left:0;color:#cfcfcf;font-size:15px">
+        <li><i class="fa-solid fa-gear" style="color:#ffd700;margin-right:8px"></i>Worked with Docker, Kubernetes, Jira, and Postman</li>
+        <li><i class="fa-solid fa-gear" style="color:#ffd700;margin-right:8px"></i>Followed structured workflows and best practices</li>
+      </ul>
+    </div>
+
+    <div class="achieve-card stagger">
+      <h3>Team Collaboration</h3>
+      <ul style="list-style:none;padding-left:0;color:#cfcfcf;font-size:15px">
+        <li><i class="fa-solid fa-users" style="color:#ffd700;margin-right:8px"></i>Collaborated with peers on academic and practice projects</li>
+        <li><i class="fa-solid fa-users" style="color:#ffd700;margin-right:8px"></i>Maintained clear communication and task coordination</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<section id="projects" class="reveal">
+  <h2>Projects</h2>
+
+  <div class="project stagger">
+    <h3 style="color:#ffc83d;margin-bottom:6px"><i class="fa-solid fa-crown" style="margin-right:8px"></i>Major Project</h3>
+    <strong>Face Morphing Detection Using Deep Learning</strong>
+    <ul style="margin:12px 0 10px 18px;color:#cfcfcf;font-size:15px">
+      <li><i class="fa-solid fa-check" style="color:#ffd700;margin-right:6px"></i>Designed and trained a deep learning model to detect face morphing attacks in biometric verification systems.</li>
+      <li><i class="fa-solid fa-check" style="color:#ffd700;margin-right:6px"></i>Applied image preprocessing and feature extraction techniques to improve detection accuracy.</li>
+      <li><i class="fa-solid fa-check" style="color:#ffd700;margin-right:6px"></i>Evaluated model performance using real and manipulated facial image datasets.</li>
+    </ul>
+    <div style="margin-top:10px;color:#ffc83d;font-size:14px">
+      <i class="fa-solid fa-tools"></i> Tools Used: Python, TensorFlow, OpenCV, CNN
+    </div>
+  </div>
+
+  <div class="project stagger">
+    <h3 style="color:#ffc83d;margin-bottom:6px"><i class="fa-solid fa-medal" style="margin-right:8px"></i>Minor Project</h3>
+    <strong>Esophagus Cancer Detection Using Medical Images</strong>
+    <ul style="margin:12px 0 10px 18px;color:#cfcfcf;font-size:15px">
+      <li><i class="fa-solid fa-check" style="color:#ffd700;margin-right:6px"></i>Developed an object detection solution using YOLOv8 to identify cancer-affected regions in medical images.</li>
+      <li><i class="fa-solid fa-check" style="color:#ffd700;margin-right:6px"></i>Performed data preprocessing, augmentation, and model tuning to enhance prediction accuracy.</li>
+      <li><i class="fa-solid fa-check" style="color:#ffd700;margin-right:6px"></i>Built a reliable model suitable for healthcare image analysis use cases.</li>
+    </ul>
+    <div style="margin-top:10px;color:#ffc83d;font-size:14px">
+      <i class="fa-solid fa-tools"></i> Tools Used: Python, YOLOv8, Deep Learning
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact reveal">
+  <h2>Contact</h2>
+
+  <div class="contact-wrap">
+
+    <div class="contact-box">
+      <h3>Contact Details</h3>
+      <div class="contact-item">
+        <i class="fa-solid fa-phone"></i>
+        <span id="phoneText">+91 6302243327</span>
+        <a href="tel:+916302243327" title="Call Now" aria-label="Call Bhanu Prasad"><i class="fa-solid fa-phone-volume"></i></a>
+        <a href="https://wa.me/916302243327" target="_blank" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        <i class="fa-regular fa-copy" title="Copy" onclick="copyText('phoneText')"></i>
+      </div>
+      <div class="contact-item">
+        <i class="fa-solid fa-envelope"></i>
+        <a id="emailText" href="https://mail.google.com/mail/?view=cm&fs=1&to=bhanuprasad6335@gmail.com" target="_blank">bhanuprasad6335@gmail.com</a>
+        <i class="fa-regular fa-copy" title="Copy" onclick="copyText('emailText')"></i>
+      </div>
+      <div class="contact-item"><i class="fa-brands fa-linkedin"></i><a href="https://www.linkedin.com/in/kalva-bhanuprasad/" target="_blank">linkedin.com/in/kalva-bhanu-prasad</a></div>
+      <div class="contact-item"><i class="fa-brands fa-github"></i><a href="https://github.com/Bhanu1476" target="_blank">github.com/Bhanu1476</a></div>
+    </div>
+
+    <div class="contact-box">
+      <h3>Current Address</h3>
+      <div class="contact-item"><i class="fa-solid fa-location-dot"></i><span>BTM Layout</span></div>
+      
+
+      <h3 style="margin-top:22px">Permanent Address</h3>
+      <div class="contact-item"><i class="fa-solid fa-house"></i><span>Chintakomma Dinne Village</span></div>
+      <div class="contact-item"><i class="fa-solid fa-city"></i><span>Kadapa District, Andhra Pradesh</span></div>
+      <div class="contact-item"><i class="fa-solid fa-map-pin"></i><span>516001, India</span></div>
+    </div>
+      
+    </div>
+
+  </div>
+</section>
+
+<footer>© 2025 Bhanu Prasad · Portfolio</footer>
+
+<script>
+  function toggleMailMenu(e){
+    e.preventDefault();
+    const menu = document.getElementById('mailMenu');
+    menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+  }
+  document.addEventListener('click', function(e){
+    const menu = document.getElementById('mailMenu');
+    if(menu && !e.target.closest('.nav-icons')) menu.style.display = 'none';
+  });
+  // ===== SCROLL REVEAL LOGIC =====
+  const reveals = document.querySelectorAll('.reveal');
+  const staggerItems = document.querySelectorAll('.stagger');
+
+  const revealOnScroll = () => {
+    const trigger = window.innerHeight * 0.85;
+
+    reveals.forEach(el => {
+      const top = el.getBoundingClientRect().top;
+      if(top < trigger){ el.classList.add('show'); }
+    });
+
+    staggerItems.forEach((el, index) => {
+      const top = el.getBoundingClientRect().top;
+      if(top < trigger){
+        setTimeout(() => el.classList.add('show'), index * 120);
+      }
+    });
+  };
+
+  window.addEventListener('scroll', revealOnScroll);
+  revealOnScroll();
+
+  // ===== NAV ACTIVE SECTION =====
+  const navLinks = document.querySelectorAll('nav a[href^="#"]');
+  const sections = document.querySelectorAll('section[id]');
+
+  const setActiveNav = () => {
+    let current = '';
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop - 120;
+      if(window.scrollY >= sectionTop){ current = section.getAttribute('id'); }
+    });
+    navLinks.forEach(link => {
+      link.classList.remove('active');
+      if(link.getAttribute('href') === '#' + current){ link.classList.add('active'); }
+    });
+  };
+
+  window.addEventListener('scroll', setActiveNav);
+  setActiveNav();
+  function copyText(id){
+    const text = document.getElementById(id).innerText;
+    navigator.clipboard.writeText(text).then(() => {
+      alert(text + ' copied');
+    });
+  }
+
+</script>
+
+</body>
+</html>
